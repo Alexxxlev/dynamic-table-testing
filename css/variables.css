@@ -1,0 +1,13 @@
+:root {
+  /* Цветовые переменные */
+  --color-bg-light: #e5e5e5;
+  --color-bg-highlight: #dfeefc;
+  --color-bg-negative: #ffd9d9;
+  --color-bg-positive: #e2ffe2;
+  --color-hover: #f1f1f1;
+
+  /* Отступы */
+  --padding-cell: 10px;
+  --margin-body: clamp(5px, 2vw, 20px);
+  --font-size-body: clamp(12px, 2vw, 16px);
+}

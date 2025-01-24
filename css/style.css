@@ -1,0 +1,47 @@
+td:nth-child(2),
+th:nth-child(2) {
+  background-color: var(--color-bg-highlight);
+}
+
+td:has(.percent[data-percent^="-"]) {
+  background-color: var(--color-bg-negative);
+}
+
+.profit {
+  background-color: var(--color-bg-positive);
+}
+
+tr:not(.chart-row):hover {
+  background-color: var(--color-hover);
+  cursor: pointer;
+}
+
+/* Стили для ячеек без определенных значений */
+tr:not(.chart-row)
+  td:not(:nth-child(2)):not(:has(.percent[data-percent^="-"])):not(.profit) {
+  background-color: var(--color-bg-light);
+}
+
+.percent {
+  padding-left: 10px;
+  display: inline-block;
+  width: 55px;
+  font-weight: bold;
+}
+
+.percent[data-percent^="-"] {
+  color: red;
+}
+
+.percent:not([data-percent^="-"]) {
+  color: green;
+}
+
+#chart-container {
+  width: 100%;
+  height: 400px;
+}
+
+.chart-row {
+  display: none;
+}

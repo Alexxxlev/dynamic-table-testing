@@ -1,0 +1,43 @@
+/* Сброс стилей */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: var(--margin-body);
+  font-size: var(--font-size-body);
+}
+
+table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: var(--padding-cell);
+  text-align: right;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-bg-light);
+  font-weight: 400;
+  text-align: center;
+}
+
+td {
+  word-wrap: break-word;
+  word-break: break-word;
+}

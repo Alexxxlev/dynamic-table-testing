@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Динамическая таблица</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Показатель</th>
+        <th>Текущий день</th>
+        <th>Вчера</th>
+        <th>Этот день недели</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-chart="[520000, 510000, 530000]">
+        <td>Выручка, руб</td>
+        <td>520000</td>
+        <td><span>510000</span><span class="percent" data-percent="0%">0%</span></td>
+        <td>530000</td>
+      </tr>
+      <tr class="chart-row">
+        <td colspan="4">
+          <div id="chart-container"></div>
+        </td>
+      </tr>
+      <tr data-chart="[290000, 310000, 300000]">
+        <td>Наличные</td>
+        <td>290000</td>
+        <td><span>310000</span><span class="percent" data-percent="+7%">+7%</span></td>
+        <td>300000</td>
+      </tr>
+      <tr data-chart="[105000, 110000, 115000]">
+        <td>Безналичный расчет</td>
+        <td>105000</td>
+        <td><span>110000</span><span class="percent" data-percent="+5%">+5%</span></td>
+        <td>115000</td>
+      </tr>
+      <tr data-chart="[102300, 104500, 100800]">
+        <td>Кредитные карты</td>
+        <td>102300</td>
+        <td><span>104500</span><span class="percent" data-percent="+2%">+2%</span></td>
+        <td>100800</td>
+      </tr>
+      <tr data-chart="[1400, 1200, 1100]">
+        <td>Средний чек, руб</td>
+        <td>1400</td>
+        <td class="profit"><span>1200</span><span class="percent" data-percent="+14%">+14%</span></td>
+        <td class="profit">1100</td>
+      </tr>
+      <tr data-chart="[1250, 900, 700]">
+        <td>Средний гость, руб</td>
+        <td>1250</td>
+        <td class="profit"><span>900</span><span class="percent" data-percent="0%">0%</span></td>
+        <td class="profit">700</td>
+      </tr>
+      <tr data-chart="[1800, 1700, 600]">
+        <td>Удаление из чека (после оплаты), руб</td>
+        <td>1800</td>
+        <td><span>1700</span><span class="percent" data-percent="-9%">-9%</span></td>
+        <td class="profit">600</td>
+      </tr>
+      <tr data-chart="[1350, 1400, 550]">
+        <td>Удаление из чека (до оплаты), руб</td>
+        <td>1350</td>
+        <td><span>1400</span><span class="percent" data-percent="0%">0%</span></td>
+        <td class="profit">550</td>
+      </tr>
+      <tr data-chart="[40, 38, 42]">
+        <td>Количество чеков</td>
+        <td>40</td>
+        <td><span>38</span><span class="percent" data-percent="-5%">-5%</span></td>
+        <td>42</td>
+      </tr>
+      <tr data-chart="[33, 39, 30]">
+        <td>Количество гостей</td>
+        <td>33</td>
+        <td><span></span>39<span class="percent" data-percent="-18%">-18%</span></td>
+        <td class="profit">30</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
